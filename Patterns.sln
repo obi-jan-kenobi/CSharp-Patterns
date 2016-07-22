@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns", "Patterns\Patterns.csproj", "{CAE77BAC-1C4B-4EB8-BEF6-360FEE74C108}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer", "Observer\Observer.csproj", "{FA350736-09B5-4615-8188-766F23E19AC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAE77BAC-1C4B-4EB8-BEF6-360FEE74C108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAE77BAC-1C4B-4EB8-BEF6-360FEE74C108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAE77BAC-1C4B-4EB8-BEF6-360FEE74C108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAE77BAC-1C4B-4EB8-BEF6-360FEE74C108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA350736-09B5-4615-8188-766F23E19AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA350736-09B5-4615-8188-766F23E19AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA350736-09B5-4615-8188-766F23E19AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA350736-09B5-4615-8188-766F23E19AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
