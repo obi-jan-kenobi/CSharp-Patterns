@@ -1,25 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace Observer {
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
+        Weatherdata weatherData;
         public MainWindow() {
             InitializeComponent();
+            weatherData = new Weatherdata();
+            CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherData);
+            weatherData.setMeasurements(80, 64, 30.4f);
         }
     }
 }

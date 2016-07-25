@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Observer {
-    interface IObserver {
-        void update(float temperature, float humidity, float pressure);
+namespace Decorator {
+    abstract class CondimentDecorator : Beverage {
+
     }
 }
