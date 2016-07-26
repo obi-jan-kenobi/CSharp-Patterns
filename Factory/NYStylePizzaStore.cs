@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Factory {
-    class NYStylePizzaStore : PizzaStore {
-        
+﻿namespace Factory {
+    class NYStylePizzaStore : PizzaStore {        
         public override Pizza createPizza(string type) {
             Pizza pizza = null;
             ingredientFactory = new NYPizzaIngredientFactory();

@@ -20,6 +20,8 @@ namespace Factory {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+            PizzaStore nyPizzaStore = new NYStylePizzaStore();
+            nyPizzaStore.orderPizza("cheese");
         }
     }
 }

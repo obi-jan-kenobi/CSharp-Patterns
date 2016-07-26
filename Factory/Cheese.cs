@@ -1,4 +1,4 @@
 ﻿namespace Factory {
-    public class Cheese {
+    public abstract class Cheese {
     }
 }

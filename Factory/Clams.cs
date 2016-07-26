@@ -1,4 +1,4 @@
 ﻿namespace Factory {
-    public class Clams {
+    public abstract class Clams {
     }
 }

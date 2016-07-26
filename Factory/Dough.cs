@@ -1,4 +1,4 @@
 ﻿namespace Factory {
-    public class Dough {
+    public abstract class Dough {
     }
 }

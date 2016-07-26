@@ -1,4 +1,4 @@
 ﻿namespace Factory {
-    public class Sauce {
+    public abstract class Sauce {
     }
 }
