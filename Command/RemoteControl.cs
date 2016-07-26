@@ -8,6 +8,7 @@ namespace Command {
     class RemoteControl {
         ICommand[] onCommands;
         ICommand[] offCommands;
+        ICommand undoCommand;
 
         public RemoteControl() {
             onCommands = new ICommand[7];
@@ -17,6 +18,7 @@ namespace Command {
                 onCommands[i] = noCommand;
                 offCommands[i] = noCommand;
             }
+            undoCommand = noCommand;
         }
 
         public void setCommand(int slot, ICommand onCommand, ICommand offCommand) {
@@ -26,10 +28,16 @@ namespace Command {
 
         public void onButtonPressed(int slot) {
             onCommands[slot].excecute();
+            undoCommand = onCommands[slot];
         }
 
         public void offButtonPressed(int slot) {
             offCommands[slot].excecute();
+            undoCommand = onCommands[slot];
+        }
+
+        public void undoButtonPressed() {
+            undoCommand.excecute();
         }
 
         public override string ToString() {

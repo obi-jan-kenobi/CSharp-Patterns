@@ -16,5 +16,9 @@ namespace Command {
             stereo.setCD();
             stereo.setVolumen(11);
         }
+
+        public void undo() {
+            stereo.off();
+        }
     }
 }

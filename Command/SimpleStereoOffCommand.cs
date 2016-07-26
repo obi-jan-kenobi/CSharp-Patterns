@@ -14,5 +14,9 @@ namespace Command {
         public void excecute() {
             stereo.off();
         }
+
+        public void undo() {
+            stereo.on();
+        }
     }
 }

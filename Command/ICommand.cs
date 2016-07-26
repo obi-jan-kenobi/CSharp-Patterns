@@ -7,5 +7,6 @@ using System.Threading.Tasks;
 namespace Command {
     interface ICommand {
         void excecute();
+        void undo();
     }
 }
