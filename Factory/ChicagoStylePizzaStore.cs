@@ -6,18 +6,14 @@ using System.Threading.Tasks;
 
 namespace Factory {
     class ChicagoStylePizzaStore : PizzaStore {
-        public ChicagoStylePizzaStore(SimplePizzaFactory factory) : base(factory) {
-        }
-
         public override Pizza createPizza(string type) {
             Pizza pizza = null;
-            switch (type) {
-                case "cheese":
-                    pizza = new CheesePizza();
-                    break;
-                case "pepperoni":
-                    pizza = new PepperoniPizza();
-                    break;
+            ingredientFactory = new ChicagoPizzaIngredientFactory();
+            if (type.Equals("cheese")) {
+                pizza = new CheesePizza(ingredientFactory);
+            }
+            if (type.Equals("pepperoni")) {
+                pizza = new PepperoniPizza(ingredientFactory);
             }
             return pizza;
         }
