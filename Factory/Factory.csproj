@@ -54,6 +54,32 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Compile Include="Cheese.cs" />
+    <Compile Include="CheeseGouda.cs" />
+    <Compile Include="CheeseParmesan.cs" />
+    <Compile Include="CheesePizza.cs" />
+    <Compile Include="ChicagoPizzaIngredientFactory.cs" />
+    <Compile Include="ChicagoStylePizzaStore.cs" />
+    <Compile Include="ClamHamaguri.cs" />
+    <Compile Include="Clams.cs" />
+    <Compile Include="ClassAsari.cs" />
+    <Compile Include="Dough.cs" />
+    <Compile Include="DoughRicedough.cs" />
+    <Compile Include="DoughSourdough.cs" />
+    <Compile Include="IPizzaIngredientFactory.cs" />
+    <Compile Include="NYPizzaIngredientFactory.cs" />
+    <Compile Include="NYStylePizzaStore.cs" />
+    <Compile Include="Pepperoni.cs" />
+    <Compile Include="PepperoniHabanero.cs" />
+    <Compile Include="PepperoniJalapeno.cs" />
+    <Compile Include="PepperoniPizza.cs" />
+    <Compile Include="Sauce.cs" />
+    <Compile Include="SauceBruschetta.cs" />
+    <Compile Include="SauceMarina.cs" />
+    <Compile Include="SimplePizzaFactory.cs" />
+    <Compile Include="Veggies.cs" />
+    <Compile Include="VeggiesPaprika.cs" />
+    <Compile Include="VeggiesTomato.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -68,6 +94,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pizza.cs" />
+    <Compile Include="PizzaStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

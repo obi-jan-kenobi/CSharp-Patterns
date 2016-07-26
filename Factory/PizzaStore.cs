@@ -6,24 +6,18 @@ using System.Threading.Tasks;
 
 namespace Factory {
     abstract class PizzaStore {
-        SimplePizzaFactory factory;
-        public PizzaStore (SimplePizzaFactory factory) {
-            this.factory = factory;
-        }
+        internal IPizzaIngredientFactory ingredientFactory;
 
-        public Pizza orderPizza(String type) {
+        public Pizza orderPizza(string item) {
             Pizza pizza;
-
-            pizza = factory.createPizza(type);
-
+            pizza = createPizza(item);
             pizza.prepare();
             pizza.bake();
             pizza.cut();
             pizza.box();
-
             return pizza;
         }
 
-        public abstract Pizza createPizza(String type);
+        public abstract Pizza createPizza(string item);
     }
 }
