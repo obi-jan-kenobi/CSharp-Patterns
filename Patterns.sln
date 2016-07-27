@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter", "Adapter\Adapter.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template", "Template\Template.csproj", "{C34DC3D7-75EA-4884-9F86-B488DBAC00E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterator", "Iterator\Iterator.csproj", "{99A26809-60FE-4596-BF19-15B7820464F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{C34DC3D7-75EA-4884-9F86-B488DBAC00E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C34DC3D7-75EA-4884-9F86-B488DBAC00E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C34DC3D7-75EA-4884-9F86-B488DBAC00E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99A26809-60FE-4596-BF19-15B7820464F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A26809-60FE-4596-BF19-15B7820464F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A26809-60FE-4596-BF19-15B7820464F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A26809-60FE-4596-BF19-15B7820464F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
