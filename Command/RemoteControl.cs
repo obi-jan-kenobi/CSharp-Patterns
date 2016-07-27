@@ -37,7 +37,7 @@ namespace Command {
         }
 
         public void undoButtonPressed() {
-            undoCommand.excecute();
+            undoCommand.undo();
         }
 
         public override string ToString() {
