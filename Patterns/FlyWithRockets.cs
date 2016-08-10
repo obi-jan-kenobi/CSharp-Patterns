@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Patterns {
-    class FlyWithRockets : FlyBehavior {
+    class FlyWithRockets : IFlyBehavior {
         public void fly() {
             Console.WriteLine("WOOOOOOOOOOOOOOOOOHOOOOOOOOOOOOOOO");
         }

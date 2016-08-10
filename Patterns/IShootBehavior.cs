@@ -1,5 +1,5 @@
 ﻿namespace Patterns {
-    internal interface ShootBehavior {
+    internal interface IShootBehavior {
         void shoot();
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Patterns {
-    class ShootWithShotgun : ShootBehavior {
+    class ShootWithShotgun : IShootBehavior {
         public void shoot() {
             Console.WriteLine("KABOOM!");
         }

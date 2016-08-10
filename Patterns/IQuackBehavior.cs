@@ -1,5 +1,5 @@
 ﻿namespace Patterns {
-    internal interface QuackBehavior {
+    internal interface IQuackBehavior {
         void quack();
     }
 }

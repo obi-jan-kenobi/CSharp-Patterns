@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Patterns {
-    class Quack : QuackBehavior {
+    class Quack : IQuackBehavior {
         public void quack() {
             Console.WriteLine("Quack!");
         }

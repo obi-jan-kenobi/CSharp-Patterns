@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Patterns {
-    class FlyWithWings : FlyBehavior {
+    class FlyWithWings : IFlyBehavior {
         public void fly() {
             Console.WriteLine("up up and away");
         }

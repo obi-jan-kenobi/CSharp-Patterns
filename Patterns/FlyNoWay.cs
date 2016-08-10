@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Patterns {
-    class FlyNoWay : FlyBehavior {
+    class FlyNoWay : IFlyBehavior {
        public void fly() {
             Console.WriteLine("i cant fly");
         }

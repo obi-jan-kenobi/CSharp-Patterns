@@ -1,5 +1,5 @@
 ﻿namespace Patterns {
-    internal interface FlyBehavior {
+    internal interface IFlyBehavior {
         void fly();
     }
 }

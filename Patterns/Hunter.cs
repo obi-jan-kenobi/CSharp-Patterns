@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace Patterns {
     abstract class Hunter {
 
-        internal QuackBehavior mimicedQuack;
-        internal ShootBehavior shootBehavior;
+        internal IQuackBehavior mimicedQuack;
+        internal IShootBehavior shootBehavior;
 
-        public void setQuackBehaviour(QuackBehavior qb) {
+        public void setQuackBehaviour(IQuackBehavior qb) {
             mimicedQuack = qb;
         }
 

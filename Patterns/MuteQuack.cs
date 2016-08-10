@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Patterns {
-    class MuteQuack : QuackBehavior {
+    class MuteQuack : IQuackBehavior {
         public void quack() {
             Console.WriteLine("<<silence>");
         }

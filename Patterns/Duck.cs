@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Patterns {
     abstract class Duck {
-        internal FlyBehavior flyBehavior;
-        internal QuackBehavior quackBehavior;
+        internal IFlyBehavior flyBehavior;
+        internal IQuackBehavior quackBehavior;
         public abstract void display();
         public void performFly() {
             flyBehavior.fly();
@@ -18,10 +18,10 @@ namespace Patterns {
         public void swim() {
             Console.WriteLine("all ducks float");
         }
-        public void setFlyBehavior(FlyBehavior fb) {
+        public void setFlyBehavior(IFlyBehavior fb) {
             flyBehavior = fb;
         }
-        public void setQuackBehavior(QuackBehavior qb) {
+        public void setQuackBehavior(IQuackBehavior qb) {
             quackBehavior = qb;
         }
     }
