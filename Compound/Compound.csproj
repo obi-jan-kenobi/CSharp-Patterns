@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A276593D-75A9-4AC5-AFF8-C772F036AF1A}</ProjectGuid>
+    <ProjectGuid>{A6C16056-294E-4F61-B8B5-4B9093ADA509}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>State</RootNamespace>
-    <AssemblyName>State</AssemblyName>
+    <RootNamespace>Compound</RootNamespace>
+    <AssemblyName>Compound</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,11 +55,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="HasQuarterState.cs" />
-    <Compile Include="NoQuarterState.cs" />
-    <Compile Include="SoldOutState.cs" />
-    <Compile Include="SoldState.cs" />
-    <Compile Include="WinnerState.cs" />
+    <Compile Include="AbstractDuckFactory.cs" />
+    <Compile Include="CountingDuckFactory.cs" />
+    <Compile Include="DuckFactory.cs" />
+    <Compile Include="DuckSimulator.cs" />
+    <Compile Include="Flock.cs" />
+    <Compile Include="Goose.cs" />
+    <Compile Include="GooseAdapter.cs" />
+    <Compile Include="IHonkable.cs" />
+    <Compile Include="IObserver.cs" />
+    <Compile Include="IQuackObservable.cs" />
+    <Compile Include="Observable.cs" />
+    <Compile Include="QuackCounter.cs" />
+    <Compile Include="Quackologist.cs" />
+    <Compile Include="RedheadDuck.cs" />
+    <Compile Include="RubberDuck.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -68,14 +78,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="GumballMachine.cs" />
-    <Compile Include="IState.cs" />
+    <Compile Include="IQuackable.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MallardDuck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

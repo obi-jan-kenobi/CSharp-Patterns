@@ -13,30 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace State {
+namespace Compound {
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
-
-        GumballMachine gumballMachine;
-
         public MainWindow() {
             InitializeComponent();
-            gumballMachine = new GumballMachine(5);
-
-            gumballMachine.insertQuarter();
-            gumballMachine.turnCrank();
-
-            gumballMachine.insertQuarter();
-            gumballMachine.insertQuarter();
-            gumballMachine.turnCrank();
-            gumballMachine.insertQuarter();
-            gumballMachine.turnCrank();
-            gumballMachine.insertQuarter();
-            gumballMachine.turnCrank();
-            gumballMachine.insertQuarter();
-            gumballMachine.turnCrank();
+            DuckSimulator simulator = new DuckSimulator();
+            AbstractDuckFactory duckFactory = new CountingDuckFactory();
+            simulator.simulate(duckFactory.CreateMallardDuck());
+            simulator.simulate(duckFactory.CreateRubberduck());
+            simulator.simulate(duckFactory.CreateRedhead());
+            Console.WriteLine(QuackCounter.GetQuacks());
+            simulator.simulate(duckFactory);
+            Console.WriteLine(QuackCounter.GetQuacks());
         }
     }
 }

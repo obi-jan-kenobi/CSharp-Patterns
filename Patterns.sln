@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composite", "Composite\Comp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "State", "State\State.csproj", "{A276593D-75A9-4AC5-AFF8-C772F036AF1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compound", "Compound\Compound.csproj", "{A6C16056-294E-4F61-B8B5-4B9093ADA509}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{A276593D-75A9-4AC5-AFF8-C772F036AF1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A276593D-75A9-4AC5-AFF8-C772F036AF1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A276593D-75A9-4AC5-AFF8-C772F036AF1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6C16056-294E-4F61-B8B5-4B9093ADA509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6C16056-294E-4F61-B8B5-4B9093ADA509}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6C16056-294E-4F61-B8B5-4B9093ADA509}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6C16056-294E-4F61-B8B5-4B9093ADA509}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

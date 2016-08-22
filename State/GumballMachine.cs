@@ -6,77 +6,55 @@ using System.Threading.Tasks;
 
 namespace State {
     class GumballMachine {
-        const int SOLD_OUT = 0;
-        const int NO_QUARTER = 1;
-        const int HAS_QUARTER = 2;
-        const int SOLD = 3;
 
-        int state = SOLD_OUT;
-        int count = 0;
+        public IState soldOutState { get; }
+        public IState noQuarterState { get; }
+        public IState hasQuarterState { get; }
+        public IState soldState { get; }
+        public IState winnerState { get; }
+
+        public IState state { get; set; }
+        
+        int count;
 
         public GumballMachine(int count) {
+
+            soldOutState = new SoldOutState(this);
+            noQuarterState = new NoQuarterState(this);
+            hasQuarterState = new HasQuarterState(this);
+            soldState = new SoldState(this);
+            winnerState = new WinnerState(this);
+
             this.count = count;
             if(count > 0) {
-                state = NO_QUARTER;
+                state = noQuarterState;
+            } else {
+                state = soldOutState;
             }
         }
 
         public void insertQuarter() {
-            if (state == HAS_QUARTER) {
-                Console.WriteLine("You cant insert another quarter");
-            } else if (state == NO_QUARTER) {
-                state = HAS_QUARTER;
-                Console.WriteLine("inserted quarter");
-            } else if (state == SOLD_OUT) {
-                Console.WriteLine("cant insert. machine is sold out");
-            } else if (state == SOLD) {
-                Console.WriteLine("already giving you a gumball");
-            }
+            state.insertQuarter();
         }
 
         public void ejectQuarter() {
-            if (state == HAS_QUARTER) {
-                state = NO_QUARTER;
-                Console.WriteLine("ejected your quarter");
-            } else if (state== NO_QUARTER) {
-                Console.WriteLine("no quarter vorhanden");
-            } else if (state == SOLD) {
-                Console.WriteLine("already turned the crank");
-            } else if (state == SOLD_OUT) {
-                Console.WriteLine("cant eject");
-            }
+            state.ejectQuarter();
         }
 
         public void turnCrank() {
-            if (state == HAS_QUARTER) {
-                state = SOLD;
-                Console.WriteLine("you turned the crank");
-                dispense();
-            } else if (state == NO_QUARTER) {
-                Console.WriteLine("need to insert quarter first");
-            } else if (state == SOLD_OUT) {
-                Console.WriteLine("machine is empty");
-            } else if (state == SOLD) {
-                Console.WriteLine("cant turn the crank twice");
+            state.turnCrank();
+            state.dispense();
+        }
+
+        public void releaseBall() {
+            Console.WriteLine("gumball ejecting...");
+            if (count > 0) {
+                count--;
             }
         }
 
-        public void dispense() {
-            if (state == SOLD) {
-                count--;
-                Console.WriteLine("gumball ejected");
-                if (count <= 0) {
-                    Console.WriteLine("machine sold out");
-                } else {
-                    state = NO_QUARTER;
-                }
-            } else if (state == NO_QUARTER) {
-                Console.WriteLine("you need to pay first");
-            } else if (state == SOLD_OUT) {
-                Console.WriteLine("no gumball ejected");
-            } else if (state == HAS_QUARTER) {
-                Console.WriteLine("no gumball ejected");
-            }
+        public int getCount() {
+            return count;
         }
     }
 }
